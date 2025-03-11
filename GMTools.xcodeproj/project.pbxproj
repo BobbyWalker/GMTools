@@ -6,13 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7F5E10FB2D7E463F003F8F4C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7F5E10FA2D7E463F003F8F4C /* Supabase */; };
+		7F5E110F2D7FA3FB003F8F4C /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F5E110E2D7FA3FB003F8F4C /* GoogleSignIn */; };
+		7F5E11112D7FA3FB003F8F4C /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F5E11102D7FA3FB003F8F4C /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7F5E10D02D7E41A9003F8F4C /* GMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7F5E11052D7E7E76003F8F4C /* Exceptions for "GMTools" folder in "GMTools" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7F5E10CF2D7E41A9003F8F4C /* GMTools */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7F5E10D22D7E41A9003F8F4C /* GMTools */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7F5E11052D7E7E76003F8F4C /* Exceptions for "GMTools" folder in "GMTools" target */,
+			);
 			path = GMTools;
 			sourceTree = "<group>";
 		};
@@ -23,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5E11112D7FA3FB003F8F4C /* GoogleSignInSwift in Frameworks */,
+				7F5E10FB2D7E463F003F8F4C /* Supabase in Frameworks */,
+				7F5E110F2D7FA3FB003F8F4C /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				7F5E10D22D7E41A9003F8F4C /* GMTools */,
+				7F5E10F92D7E463F003F8F4C /* Frameworks */,
 				7F5E10D12D7E41A9003F8F4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +66,13 @@
 				7F5E10D02D7E41A9003F8F4C /* GMTools.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7F5E10F92D7E463F003F8F4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +95,9 @@
 			);
 			name = GMTools;
 			packageProductDependencies = (
+				7F5E10FA2D7E463F003F8F4C /* Supabase */,
+				7F5E110E2D7FA3FB003F8F4C /* GoogleSignIn */,
+				7F5E11102D7FA3FB003F8F4C /* GoogleSignInSwift */,
 			);
 			productName = GMTools;
 			productReference = 7F5E10D02D7E41A9003F8F4C /* GMTools.app */;
@@ -94,6 +127,10 @@
 			);
 			mainGroup = 7F5E10C72D7E41A9003F8F4C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7F5E10E22D7E421D003F8F4C /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				7F5E110D2D7FA3FB003F8F4C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7F5E10D12D7E41A9003F8F4C /* Products */;
 			projectDirPath = "";
@@ -252,6 +289,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GMTools/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -291,6 +329,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GMTools/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -339,6 +378,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F5E10E22D7E421D003F8F4C /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		7F5E110D2D7FA3FB003F8F4C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F5E10FA2D7E463F003F8F4C /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F5E10E22D7E421D003F8F4C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		7F5E110E2D7FA3FB003F8F4C /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F5E110D2D7FA3FB003F8F4C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		7F5E11102D7FA3FB003F8F4C /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F5E110D2D7FA3FB003F8F4C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F5E10C82D7E41A9003F8F4C /* Project object */;
 }
