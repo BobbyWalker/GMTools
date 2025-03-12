@@ -10,11 +10,13 @@ struct Profile: Codable {
     let fullName: String?
     let website: String?
     let avatarURL: String?
+    let viewable: Bool
     
     enum CodingKeys: String, CodingKey {
         case username
         case fullName = "full_name"
         case website
         case avatarURL = "avatar_url"
+        case viewable = "public"
     }
 }

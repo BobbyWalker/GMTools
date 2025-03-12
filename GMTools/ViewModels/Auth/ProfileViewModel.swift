@@ -91,16 +91,23 @@ class ProfileViewModel {
     private func fetchProfiles() async {
             print("Loading profiles...")
             do {
+                print(try await supabase.from("usernames").select().execute().value)
                 let rawProfiles: [Profile] = try await supabase
-                    .from("profiles")
-                    .select("username")
+                    .from("usernames")
+                    .select()
                     .execute()
                     .value
                 
                 for profile in rawProfiles {
                     let username: String? = profile.username
                     if username == nil { continue }
-                    let newProfile = Profile(username: username, fullName: nil, website: nil, avatarURL: nil)
+                    let newProfile = Profile(
+                        username: username,
+                        fullName: nil,
+                        website: nil,
+                        avatarURL: nil,
+                        viewable: false
+                    )
                     profiles.append(newProfile)
                 }
             } catch {
@@ -120,7 +127,8 @@ class ProfileViewModel {
                     username: username,
                     fullName: fullName,
                     website: website,
-                    avatarURL: imageURL
+                    avatarURL: imageURL,
+                    viewable: false
                 )
                 try await supabase
                     .from("profiles")
