@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @Bindable var viewModel = AuthViewModel.shared
+    @Bindable var viewModel: AuthViewModel = .shared
+
     @Binding var method: String?
 
     var body: some View {

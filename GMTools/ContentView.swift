@@ -5,15 +5,21 @@
 //  Created by Bobby Walker on 3/9/25.
 //
 
+import Supabase
 import SwiftUI
 
 struct ContentView: View {
     @State private var isAuthenticated: Bool = false
+    @AppStorage("profileFinished") var profileFinished: Bool?
     
     var body: some View {
         Group {
             if isAuthenticated {
-                ProfileView()
+                if profileFinished ?? false {
+                    MainView()
+                } else {
+                    ProfileView()
+                }
             } else {
                 AuthView()
             }

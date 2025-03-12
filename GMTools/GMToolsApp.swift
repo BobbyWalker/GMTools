@@ -13,9 +13,9 @@ struct GMToolsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onOpenURL { url in
-                    GIDSignIn.sharedInstance.handle(url)
-                }
+//                .onOpenURL { url in
+//                    GIDSignIn.sharedInstance.handle(url)
+//                }
         }
     }
 }

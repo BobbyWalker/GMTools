@@ -11,7 +11,7 @@ import SwiftUI
 
 
 @Observable
-class AuthViewModel: NSObject {
+class AuthViewModel: NSObject, Identifiable {
     static let shared = AuthViewModel()
     static let apple = SignInWithAppleViewModel()
     static let google = SignInWithGoogleViewModel()
